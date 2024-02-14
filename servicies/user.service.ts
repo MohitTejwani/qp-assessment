@@ -22,7 +22,7 @@ export const loginUserService =  async(userDetails:any)=>{
         if(!isUserExist){
             return {isError:true,response:"Invalid username password"}
         }
-        const token = jwt.sign({ id: isUserExist?.id }, "process.env.JWT_SECRET", { expiresIn: 3600 * 12 });
+        const token = jwt.sign({ id: isUserExist?.id }, process.env.JWT_SECRET, { expiresIn: 3600 * 12 });
         return {isError:false,token}
     } catch (error) {
         return {isError:true,response: error}
