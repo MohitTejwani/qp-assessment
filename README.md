@@ -16,3 +16,5 @@ API List:
 Flow of execution
 First create new user then list all grocery to order grocery need to login will return token in responce required this as beerar token to request order grocery
 
+For Testing
+Postman collection is share file name QP_assigment_API_.json

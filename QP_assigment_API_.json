@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "799b8f98-a46a-4674-97c0-ae9a1cf38046",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Mohit\",\n    \"password\":\"12345\",\n    \"email\":\"mohit@gmail.com\",\n    \"role\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/user/create"
+			},
+			"response": []
+		},
+		{
+			"name": "user login ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"mohit@gmail.com\",\n    \"password\":\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "grocery create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"g1\",\n    \"price\":50,\n    \"description\":\"description 1g\",\n    \"inventoryLevel\":100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/grocery/create"
+			},
+			"response": []
+		},
+		{
+			"name": "get all grocery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4200/grocery"
+			},
+			"response": []
+		},
+		{
+			"name": "place order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA3OTMxMDUzLCJleHAiOjE3MDc5NzQyNTN9.7NaSzdb3lDEw0QU8ighru5n5rWuKcuPynjfX4Ri_65E"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":1,\n    \"items\":[1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4200/order/"
+			},
+			"response": []
+		}
+	]
+}
